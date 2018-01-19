@@ -1,0 +1,10 @@
+{
+	"title"		: "Breaching Charge",
+	"type"		: "weapon",
+	"tags"		: [ "fun", "roleplay" ],
+	"ignore"	: [
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
