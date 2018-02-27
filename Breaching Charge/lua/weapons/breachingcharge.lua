@@ -1,39 +1,40 @@
 
 if (CLIENT) then
-	SWEP.PrintName        	= "Breaching Charge"			   
-	SWEP.Slot				= 3  
+	SWEP.PrintName        		= "Breaching Charge"			   
+	SWEP.Slot			= 3  
 	SWEP.SlotPos			= 1    
 	SWEP.DrawCrosshair		= true
 	SWEP.DrawAmmo    		= true
 
 end
 
-SWEP.Author					= "Justin Russo"
-SWEP.Instructions	 	    = "Use on a door to blow it open!"
+SWEP.Author				= "Justin Russo"
+SWEP.Instructions	 	     	= "Use on a door to blow it open!"
 SWEP.Spawnable				= true
 SWEP.ViewModel				= "models/weapons/c_slam.mdl"
 SWEP.WorldModel				= "models/weapons/w_slam.mdl"
-SWEP.Weight					= 5   
+SWEP.Weight				= 5   
 SWEP.AutoSwitchTo			= false   
 SWEP.AutoSwitchFrom			= false  
 SWEP.HoldType 				= "slam"
 SWEP.UseHands 				= true
-SWEP.Primary.ClipSize		= 1
-SWEP.Primary.DefaultClip	= 1
-SWEP.Primary.Automatic		= false
+SWEP.Primary.ClipSize			= 1
+SWEP.Primary.DefaultClip		= 1
+SWEP.Primary.Automatic			= false
 SWEP.Primary.Ammo			= "slam"
 SWEP.Primary.Delay			= 1
-SWEP.Secondary.ClipSize		= -1
-SWEP.Secondary.DefaultClip	= -1
-SWEP.Secondary.Automatic	= false
+SWEP.Secondary.ClipSize			= -1
+SWEP.Secondary.DefaultClip		= -1
+SWEP.Secondary.Automatic		= false
 SWEP.Secondary.Ammo			= "" 
+local respawnTime			= 280
 
 if (SERVER) then
 	if (file.Exists( "breachingcharge.txt", "DATA" )) then
 		respawnTime = file.Read( "breachingcharge.txt", "DATA" )
 	end	
 	else
-	file.Write( "breachingcharge.txt", 280 )
+	file.Write( "breachingcharge.txt", respawnTime )
 	
 
 end
