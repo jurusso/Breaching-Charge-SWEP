@@ -27,16 +27,14 @@ SWEP.Secondary.ClipSize			= -1
 SWEP.Secondary.DefaultClip		= -1
 SWEP.Secondary.Automatic		= false
 SWEP.Secondary.Ammo			= "" 
-local respawnTime			= 280
 
 if (SERVER) then
 	if (file.Exists( "breachingcharge.txt", "DATA" )) then
-		respawnTime = file.Read( "breachingcharge.txt", "DATA" )
-	end	
+		respawnTime = tonumber( file.Read( "breachingcharge.txt", "DATA" ) , 10)
 	else
-	file.Write( "breachingcharge.txt", respawnTime )
-	
-
+	file.Write( "breachingcharge.txt", 280 )
+		respawnTime = 280
+	end
 end
 
 concommand.Add( "breach_settime", function( ply, cmd, args )
